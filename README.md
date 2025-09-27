@@ -1,6 +1,6 @@
 Python Hands-on Projects
 
-This repository contains a collection of simple Python projects developed to practice programming concepts and problem-solving skills. Each project is designed to strengthen the fundamentals of Python and prepare for advanced applications such as data analysis and machine learning.
+This repository contains a collection of simple Python projects developed to practice programming concepts and problem-solving skills. Each project is designed to strengthen the fundamentals of Python.
 
 Contents
 
