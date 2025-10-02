@@ -24,7 +24,9 @@ while total_chance!=0:
         print(f"Remaining chance is :{total_chance}")
 else:
     print("💀 Game Over!!!!")
+
     print("You lose!!!")
+    
 print(f"The correct word is :{word}")
 
 
