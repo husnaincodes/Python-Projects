@@ -1,6 +1,9 @@
 
 import smtplib as s
+
 from getpass import getpass 
+
+
 user = input("Enter Your Email Please: ")
 
 password = getpass("Enter Your password please: ")
