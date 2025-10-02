@@ -1,15 +1,17 @@
 import random
 with open("words.txt", "r") as f:
     data = f.read() 
-
 words = data.split()
+
 word = random.choice(words).upper()
 
 total_chance = 10
 guessed_word ="_"*len(word)
 
 while total_chance!=0:
+
     print(guessed_word)
+
     letter = input("GUESS A LETTER : ").upper()
     if letter in word:
         for  index in range(len(word)):
@@ -26,7 +28,7 @@ else:
     print("💀 Game Over!!!!")
 
     print("You lose!!!")
-    
+
 print(f"The correct word is :{word}")
 
 
