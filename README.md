@@ -10,12 +10,12 @@ Adventure game.py	A text-based adventure game.<br>
 Hangman game.py	Classic Hangman word guessing game.<br>
 Login page.py (Flask)	Basic Flask web app for user login.<br>
 Password manager.py	Stores and manages passwords securely.<br>
-Project_02.py	Number guessing game.
-Project_03.py	QR code generator using Python.
-Python project1.py	Dice roll simulation game.
-Quiz game.py	Simple quiz game using Python logic.
-Voice AI.py	Voice assistant built using Python speech libraries.
-Words.txt / Password.txt	Supporting files for some projects.
+Project_02.py	Number guessing game.<br>
+Project_03.py	QR code generator using Python.<br>
+Python project1.py	Dice roll simulation game.<br>
+Quiz game.py	Simple quiz game using Python logic.<br>
+Voice AI.py	Voice assistant built using Python speech libraries.<br>
+Words.txt / Password.txt	Supporting files for some projects.<br>
 
 ⚙️ Technologies Used
 
