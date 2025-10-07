@@ -7,12 +7,12 @@ root.title('Digital clock')
 
 
 def time():
-    string = strftime('%H:%M:%S %p \n %D')
+    string = strftime('%H:%M:%S %p \n %A, %D %B %Y')
     label.config(text = string)
     label.after(1000,time)
 
 label = tk.Label(root,font =("calibri" , 50 ,"bold"),background = "red" ,foreground = "black")
-label.pack(anchor = "center")
+label.pack(anchor = "center",pady=50)
 
 time()
 root.mainloop()
