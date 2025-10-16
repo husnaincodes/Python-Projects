@@ -22,7 +22,7 @@ body = input("Enter Your message body please :")
 
 message = "Suject: {}\n\n{}".format(subject,body)
 
-listadd = ["Husnain.tayab@hotmail.com","husnaintayab6@gmail.com"]
+listadd = ["Husnain.tayab@hotmail.com"]
 
 email.sendmail(user,listadd,message)
 
