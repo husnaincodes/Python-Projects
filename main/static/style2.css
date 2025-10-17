@@ -1,0 +1,52 @@
+/* ABOUT PAGE STYLING */
+.about-section {
+  background-color: #121212;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.about-title {
+  font-weight: 700;
+  color: #0d6efd;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: #bbb;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.divider {
+  width: 60%;
+  margin: 40px auto;
+  border: 1px solid #333;
+}
+
+.about-subtitle {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  margin: 10px 0;
+}
+
+.project-list a {
+  color: #66b2ff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.project-list a:hover {
+  color: red;
+  text-decoration: underline;
+}

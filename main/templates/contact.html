@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | husnaincodes</title>
+   <link rel="stylesheet" href="{% static 'style4.css' %}">
+</head>
+<body>
+
+  <!-- Simple Navbar -->
+  <nav class="nav-opt">
+    <h2>husnaincodes</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h1>Contact <span>Me</span></h1>
+      <p>Got a question or want to work together? Drop a message below 👇</p>
+
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Other ways to connect</h3>
+        <p>Email: <a href="mailto:Husnain.tayab@hotmail.com">Husnain.tayab@hotmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/husnaincodes" target="_blank">github.com/husnaincodes</a></p>
+        <p>Location: Lahore, Pakistan 🇵🇰</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

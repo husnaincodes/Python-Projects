@@ -1,0 +1,91 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1f1f1f !important;
+  border-bottom: 1px solid #333;
+}
+
+.navbar-brand {
+  color:black !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: #ddd !important;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: black !important;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Typing Animation */
+.typing-text {
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* cursor color */
+  width: 0;
+  animation: typing 3s steps(20, end) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Colors */
+.site-name {
+  color: black; /* "husnaincodes" */
+}
+
+.brand {
+  color: #ff4444; /* red for 愛 */
+}
+
+/* Subtitle animation */
+.fade-slide-delay {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 2s ease forwards;
+  animation-delay: 3.2s;
+  color: black; /* make subtitle black */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
