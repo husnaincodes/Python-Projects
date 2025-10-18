@@ -10,6 +10,7 @@ admin.site.index_title = "Welcome to husnaincodes愛 Portal"
 
 urlpatterns = [
  path("",views.index,name="Home"),
+
  path("about",views.about,name="About"),
  path("project",views.project,name="Projects"),
  path("contact",views.contact,name="Contact")
