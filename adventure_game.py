@@ -1,5 +1,6 @@
 
 def adventure_game():
+    
     print("Welcome! to the Adventure Game")
 
     name = input("Enter your name please : ")
