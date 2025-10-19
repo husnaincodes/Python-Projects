@@ -1,0 +1,49 @@
+/* PROJECTS PAGE */
+.projects-section {
+  background-color: #121212;
+  color: #fff;
+  padding-bottom: 60px;
+}
+
+.projects-title {
+  color: yellow;
+  font-weight: 700;
+}
+
+.projects-intro {
+  color: #bbb;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.project-category h2 {
+  color: #66b2ff;
+  border-left: 4px solid #0d6efd;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.project-list {
+  list-style: square;
+  margin-left: 40px;
+  color: #ccc;
+}
+
+.project-list li {
+  margin-bottom: 6px;
+}
+
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-outline-primary {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}

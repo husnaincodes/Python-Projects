@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | husnaincodes</title>
+  <link rel="stylesheet" href="{% static 'style3.css' %}">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  {% include 'navbar.html' %}
+  <section class="projects-section">
+    <div class="container mt-5">
+      <h1 class="text-center projects-title">My Python Projects 🐍</h1>
+      <p class="text-center projects-intro">
+        A collection of my hands-on Python learning projects — from simple pattern programs to functional applications.
+      </p>
+
+      <!-- Pattern Projects -->
+      <div class="project-category mt-5">
+        <h2>🧩 Web Design & Development / Pattern Programs</h2>
+        <ul class="project-list">
+          <li>Right-Angled Triangle</li>
+          <li>Inverted Right-Angled Triangle</li>
+          <li>Pyramid Pattern</li>
+          <li>Diamond Pattern</li>
+          <li>Square and Hollow Square</li>
+          <li>Half and Full Number Patterns (optional)</li>
+        </ul>
+      </div>
+
+      <!-- Small Python Programs -->
+      <div class="project-category mt-5">
+        <h2>⚙️ Small Python Programs</h2>
+        <ul class="project-list">
+          <li>Replace Words – Find and replace words in a file</li>
+          <li>Temperature Convertor – Convert Celsius ↔ Fahrenheit</li>
+          <li>Class.py – Demonstrating Python classes and objects</li>
+          <li>File Read / Write – Handle text file operations</li>
+          <li>Function Examples – Create and return function values</li>
+          <li>Rock, Paper, Scissors – Console-based game</li>
+          <li>Hiscore Game – Save and update high scores</li>
+          <li>Inch to Cm – Mathematical conversion program</li>
+          <li>Snake, Gun, Water – Classic Python mini game</li>
+        </ul>
+      </div>
+
+      <!-- Full Projects -->
+      <div class="project-category mt-5">
+        <h2>📂 Full Python Projects</h2>
+        <table class="table table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Email check.py / Email sender.py</td><td>Validate and send emails using Python.</td></tr>
+            <tr><td>Notification.py</td><td>Simple desktop notification app.</td></tr>
+            <tr><td>Rent calculator.py</td><td>Calculates rent splits and expenses.</td></tr>
+            <tr><td>Adventure game.py</td><td>Interactive text-based adventure game.</td></tr>
+            <tr><td>Hangman game.py</td><td>Classic Hangman guessing game.</td></tr>
+            <tr><td>Login page.py (Flask)</td><td>Basic web app for user login.</td></tr>
+            <tr><td>Password manager.py</td><td>Stores and manages passwords securely.</td></tr>
+            <tr><td>Project_02.py</td><td>Number guessing game.</td></tr>
+            <tr><td>Project_03.py</td><td>QR code generator.</td></tr>
+            <tr><td>Python project1.py</td><td>Dice roll simulation game.</td></tr>
+            <tr><td>Quiz game.py</td><td>Simple Python quiz logic.</td></tr>
+            <tr><td>Voice AI.py</td><td>Voice assistant using speech libraries.</td></tr>
+            <tr><td>Words.txt / Password.txt</td><td>Support files for projects.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- GitHub Link -->
+      <div class="text-center mt-4">
+        <a href="https://github.com/husnaincodes" class="btn btn-outline-primary" target="_blank">Visit My GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
