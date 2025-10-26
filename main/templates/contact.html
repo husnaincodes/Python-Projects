@@ -5,28 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | husnaincodes</title>
-   <link rel="stylesheet" href="{% static 'style4.css' %}">
+  <link rel="stylesheet" href="{% static 'style4.css' %}">
 </head>
 <body>
 
-  <!-- Simple Navbar -->
-  <nav class="nav-opt">
-    <h2>husnaincodes</h2>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Contact Section -->
+  {% include 'navbar.html' %}
+
+  <!-- === Contact Section === -->
   <section class="contact-section">
     <div class="contact-container">
       <h1>Contact <span>Me</span></h1>
       <p>Got a question or want to work together? Drop a message below 👇</p>
 
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" method="post">
+        {% csrf_token %}
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
