@@ -36,7 +36,6 @@ X_test_features = vectorizer.transform(X_test)
 model = MultinomialNB()
 model.fit(X_train_features, y_train)
 
-
 y_pred = model.predict(X_test_features)
 
 
