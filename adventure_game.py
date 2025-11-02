@@ -18,7 +18,7 @@ def adventure_game():
         choice2 = input("What do you do? (swim/raft): ").strip().lower()
 
         if choice2 == "swim":
-            print("\nYou try to swim, A crocodile eats you 🐊. Game Over!")
+            print("\nYou try to swim, A crocodile eats you . Game Over!")
 
         elif(choice2=="raft"):
             print("\nYou build a raft and cross safely. On the other side, you find a treasure chest! 🎉 You win!")
@@ -33,15 +33,15 @@ def adventure_game():
         choice2 = input("What do you do? (climb/around): ").strip().lower()
 
         if choice2 == "climb":
-            print("\nYou climb the mountain and find a wise sage 🧙. He gives you a magical sword. You win!")
+            print("\nYou climb the mountain and find a wise sage . He gives you a magical sword. You win!")
 
 
         elif choice2 == "around":
 
-            print("\nYou go around the mountain but get lost in the forest forever... Game Over 😢")
+            print("\nYou go around the mountain but get lost in the forest forever... Game Over ")
         else:
-            print("Invalid choice! A wolf attacks you 🐺. Game Over!")
+            print("Invalid choice! A wolf attacks you . Game Over!")
 
     else:
-        print("You stand still and do nothing... A wild bear finds you 🐻. Game Over!")
+        print("You stand still and do nothing... A wild bear finds you . Game Over!")
 adventure_game()
