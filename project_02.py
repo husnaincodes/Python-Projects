@@ -1,10 +1,10 @@
 
 import random
-number = random.randint(1,100)
+number = random.randint(1,200)
 
 try:
         while True:
-            choice = int(input("Gusse the number between 1 to 100 : "))
+            choice = int(input("Gusse the number between 1 to 200 : "))
    
             if(choice<number):
                 print(" Your number is low")
