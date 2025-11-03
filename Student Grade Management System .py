@@ -1,7 +1,7 @@
 student_grades = { }
 def add_student(name ,grade):
     student_grades[name]= grade
-    print(f"Added {name} with a {grade}")
+    print(f"Added {name} with a {grade} marks")
 
 
 
@@ -58,3 +58,7 @@ def main():
         elif choice == 5:
             print("closing the program......")
             break
+        else:
+            print("Invalid choice!!")
+if __name__ == "__main__":
+    main()
