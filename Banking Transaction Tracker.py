@@ -2,13 +2,14 @@
 
 transactions = [5000, -2000, 3000, -1500, 4000, -1000]
 
-deposits = withdrawals = 0
+deposits = 0
+withdrawals = 0 
 
 for t in transactions:
     if t > 0:
-        deposits += t
+        deposits =deposits+t
     else:
-        withdrawals += t
+        withdrawals =withdrawals+t
 
 net_balance = deposits + withdrawals
 
