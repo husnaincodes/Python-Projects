@@ -11,7 +11,7 @@ def time():
     label.config(text = string)
     label.after(1000,time)
 
-label = tk.Label(root,font =("calibri" , 50 ,"bold"),background = "red" ,foreground = "black")
+label = tk.Label(root,font =("calibri" , 50 ,"bold"),background = "blue" ,foreground = "black")
 label.pack(anchor = "center",pady=50)
 
 time()
