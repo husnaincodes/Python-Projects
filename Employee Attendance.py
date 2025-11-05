@@ -25,6 +25,7 @@ while True:
 
 # Results
 print("\n--- Attendance Summary ---")
+
 print("Employees present today:", present)
 print("Employees on leave today:", leave)
 print("Present but not on leave:", present - leave)
