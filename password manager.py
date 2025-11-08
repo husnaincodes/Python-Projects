@@ -13,6 +13,7 @@ def add():
     pwd = input("Enter your password: ")
     with open("password.txt",'a') as f :
         f.write(f"{name}|{pwd} \n")
+        
 while True:
     mode = input("Would you like to add new password or view the existing one (add , view)? .Press q for quit: ")
     if mode == "q":
