@@ -13,8 +13,6 @@ class SpellCheckerApp:
         return " ".join(corrected_words)
 
 
-
-
     def run (self):
         print("\n-----𝗦𝗽𝗲𝗹𝗹𝗖𝗵𝗲𝗰𝗸𝗲𝗿-----")
         while True:
