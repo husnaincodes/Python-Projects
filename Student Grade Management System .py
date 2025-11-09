@@ -41,6 +41,7 @@ def main():
         print("3. Delete student ")
         print("4. View  students ")
         print("5. Exit")
+        
         choice  = int(input("Enter your choice : "))
         if choice == 1 :
             name  = input("Enter a student name :")
