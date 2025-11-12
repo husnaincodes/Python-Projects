@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
-
+from Home.models import Contact
+from datetime import datetime
 def index(request):
     if "user" not in request.session:
         return redirect("login")   # redirects to login page
@@ -15,4 +16,10 @@ def project(request):
     return render(request,"projects.html")
 def contact(request):
     # return HttpResponse("This is Contact page")
+    if request.method=="POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+        contact = Contact(name=name,email=email,message=message,date= datetime.today())
+        contact.save()
     return render(request,"contact.html")
