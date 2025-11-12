@@ -18,14 +18,14 @@ while total_chance!=0:
             if word[index] == letter: 
                 guessed_word = guessed_word[:index]+letter+guessed_word[index+1:]
         if guessed_word == word:
-            print("🎉 Congratulation you won the game !!!!!")
+            print("Congratulation you won the game !!!!!")
             break
     else:
         total_chance-=1
-        print("❌ Incorrect guess!!!!!")
+        print("Incorrect guess!!!!!")
         print(f"Remaining chance is :{total_chance}")
 else:
-    print("💀 Game Over!!!!")
+    print("Game Over!!!!")
 
     print("You lose!!!")
 
