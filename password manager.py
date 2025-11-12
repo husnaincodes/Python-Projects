@@ -6,7 +6,7 @@ def view():
             data = line.strip()
             user, password = data.split("|")
             print(f"User: {user}   Passwrod: {password}")
-            # fer.decrypt(password.encode().decode())
+          
         
 def add():
     name = input("Enter your account name: ")
