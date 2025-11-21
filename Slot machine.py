@@ -10,6 +10,7 @@ symbol_count = {
     "C":6,
     "D":8
 }
+
 def get_slot_machine_spin(rows,cols,symbols):
     all_symbols=[]
     for symbol , symbol_count in symbols.items():
@@ -24,6 +25,7 @@ def get_slot_machine_spin(rows,cols,symbols):
             current_symbols.remove(value)
             column.append(value)
         columns.append(column)
+
 
 def print_slot_machine(columns):
     for row in range(len(columns[0])):
@@ -74,8 +76,6 @@ def get_bet():
         else:
             print("Enter only digit")
     return amount
-
-
 
 
 
