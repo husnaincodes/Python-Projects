@@ -23,7 +23,7 @@ while True:
     else:
         print("Invalid input, please try again.")
 
-# Results
+
 print("\n--- Attendance Summary ---")
 
 print("Employees present today:", present)
