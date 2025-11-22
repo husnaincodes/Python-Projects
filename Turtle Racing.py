@@ -1,7 +1,8 @@
 import turtle
 import time
+import random
 WIDTH ,HEIGHT = 500,500
-
+COLORS = ["red","green","green","yellow","blue","cyan","brown","pink","orange","purple"]
 def get_number_of_racers():
     racers = 0
     while True:
@@ -23,13 +24,22 @@ def init_turtle():
     screen.title("Turtle Racing!")
 
 
+def create_turtles(colors):
+    turtles = []
+    spacing = WIDTH//(len(colors)+1)
+    for i ,color in enumerate(colors):
+        racer = turtle.Turtle()
+        racer.color(color)
+        racer.shape("turtle")
+        racer.left(90)
+        racer.penup()
+        racer.setpos(-WIDTH//2,(i+1)*spacing,-HEIGHT//2+20)
+        racer.pendown()
+        turtles.append(racer)
+    return turtles
+
 racers = get_number_of_racers()
 init_turtle()
-racer = turtle.Turtle()
-racer.forward(100)
-racer.left(90)
-racer.forward(100)
-racer.left(90)
-racer.backward(100)
-
-time.sleep(5)
+random.shuffle(COLORS)
+colors = COLORS[:racers]
+create_turtles(colors)
