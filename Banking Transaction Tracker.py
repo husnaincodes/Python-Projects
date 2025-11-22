@@ -1,6 +1,6 @@
 
 
-transactions = [5000, -2000, 3000, -1500, 4000, -1000]
+transactions = [5000, -2000, 3000, -1500, 4000, -1000,-500]
 
 deposits = 0
 withdrawals = 0 
