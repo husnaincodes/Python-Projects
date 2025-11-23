@@ -10,7 +10,7 @@ correct_pin = "1234"
 # ------------ LOGIN WINDOW ------------
 def login_window():
     login = tk.Tk()
-    login.title("Digital Wallet - Login")
+    login.title("Digital Wallet Simulation")
     login.geometry("300x200")
 
     tk.Label(login, text="Enter PIN", font=("Bold", 14)).pack(pady=10)
