@@ -73,7 +73,6 @@ def add_money():
     transactions.append(("ADD", amount))
     print("Amount added successfully!\n")
 
-
 # ---------------- Pay Money ------------------------
 def pay_money():
     global balance
