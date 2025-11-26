@@ -1,5 +1,6 @@
-
-#           DIGITAL WALLET
+# ----------------------------------------------------
+#           DIGITAL WALLET (FinTech Project) - Fixed
+# ----------------------------------------------------
 
 # Initial wallet balance
 balance = 0
@@ -10,6 +11,7 @@ transactions = []
 # Correct wallet PIN
 correct_pin = "1234"
 
+
 # ---------------- Login Function ------------------
 def login():
     print("---------------------------------------")
@@ -19,7 +21,7 @@ def login():
     attempts = 3
 
     while attempts > 0:
-        pin = input("Enter PIN: ")
+        pin = input("Enter PIN: ").strip()            # strip spaces
 
         if pin == correct_pin:
             print("\nLogin successful!\n")
@@ -47,16 +49,27 @@ def show_menu():
 
 # ---------------- Check Balance --------------------
 def check_balance():
+    # read-only access is fine, but being explicit is OK
+    global balance
     print(f"\nCurrent Balance: {balance} PKR\n")
+    input("Press Enter to continue...")   # pause so user can read
 
 
 # ---------------- Add Money ------------------------
 def add_money():
     global balance
 
-    amount = int(input("Enter amount to add: "))
-    balance += amount
+    try:
+        amount_str = input("Enter amount to add: ").strip()
+        amount = int(amount_str)
+        if amount <= 0:
+            print("Amount must be a positive number.\n")
+            return
+    except ValueError:
+        print("Please enter a valid number.\n")
+        return
 
+    balance += amount
     transactions.append(("ADD", amount))
     print("Amount added successfully!\n")
 
@@ -65,8 +78,20 @@ def add_money():
 def pay_money():
     global balance
 
-    receiver = input("Enter receiver name: ")
-    amount = int(input("Enter amount to pay: "))
+    receiver = input("Enter receiver name: ").strip()
+    if receiver == "":
+        print("Receiver name cannot be empty.\n")
+        return
+
+    try:
+        amount_str = input("Enter amount to pay: ").strip()
+        amount = int(amount_str)
+        if amount <= 0:
+            print("Amount must be a positive number.\n")
+            return
+    except ValueError:
+        print("Please enter a valid number.\n")
+        return
 
     if amount > balance:
         print("Not enough balance!\n")
@@ -78,10 +103,12 @@ def pay_money():
 
 # ------------ Transaction History ------------------
 def show_history():
+    global transactions
     print("\n----- Transaction History -----")
 
     if len(transactions) == 0:
         print("No transactions yet.\n")
+        input("Press Enter to continue...")
         return
 
     count = 1
@@ -93,13 +120,14 @@ def show_history():
         count += 1
 
     print("---------------------------------------\n")
+    input("Press Enter to continue...")   # pause so user can read
 
 
 # ---------------- Main Program ---------------------
 if login():  # Only run menu if login is successful
     while True:
         show_menu()
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ").strip()    # strip spaces
 
         if choice == "1":
             check_balance()
