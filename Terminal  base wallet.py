@@ -1,6 +1,5 @@
-# ----------------------------------------------------
-#           DIGITAL WALLET
 
+#           DIGITAL WALLET
 
 # Initial wallet balance
 balance = 0
