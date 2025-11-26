@@ -10,7 +10,6 @@ transactions = []
 # Correct wallet PIN
 correct_pin = "1234"
 
-
 # ---------------- Login Function ------------------
 def login():
     print("---------------------------------------")
