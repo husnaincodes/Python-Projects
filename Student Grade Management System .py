@@ -13,7 +13,6 @@ def update_student(name , grade):
              print(f"{name} is not found !!")
 
 
-
 def delete_student(name):
     if name in student_grades:
      del student_grades[name]
@@ -30,7 +29,6 @@ def display_all_student():
             print(f"{name} | {grade}")
     else:
         print("Student not found!!")
-
 
 
 def main():
@@ -61,5 +59,6 @@ def main():
             break
         else:
             print("Invalid choice!!")
+
 if __name__ == "__main__":
     main()
