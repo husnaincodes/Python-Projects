@@ -3,5 +3,4 @@ inventory = {}
 
 for item, qty in products:
     inventory[item] = inventory.get(item, 0) + qty
-
 print(inventory)
