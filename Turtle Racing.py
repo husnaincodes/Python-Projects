@@ -1,10 +1,12 @@
 import turtle
 import time
 import random
+
 WIDTH ,HEIGHT = 500,500
 COLORS = ["red","green","green","yellow","blue","cyan","brown","pink","orange","purple"]
 def get_number_of_racers():
     racers = 0
+
     while True:
         racers = input("Enter a number between (2-10): ")
         if racers.isdigit():
@@ -13,15 +15,16 @@ def get_number_of_racers():
             print("Try Again ..... ")
             continue
 
-
         if 2<=racers<=10:
             return racers
         else:
             print("Number not in range (2-10). Try again...")
+
 def init_turtle():
     screen = turtle.Screen()
     screen.setup(WIDTH,HEIGHT)
     screen.title("Turtle Racing!")
+
 
 def race(colors):
     turtles = create_turtles(colors)
@@ -32,6 +35,8 @@ def race(colors):
             x,y = racer.pos()
             if y >=HEIGHT//2-10:
                 return colors[turtles.index(racer)]
+            
+            
 def create_turtles(colors):
     turtles = []
     spacing = WIDTH//(len(colors)+1)
@@ -45,6 +50,7 @@ def create_turtles(colors):
         racer.pendown()
         turtles.append(racer)
     return turtles
+
 
 racers = get_number_of_racers()
 init_turtle()
