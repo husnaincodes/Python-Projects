@@ -142,7 +142,6 @@ def main_window():
 
         tk.Button(pay_win, text="Send", command=send_payment).pack(pady=20)
 
-    # ------ TRANSACTION HISTORY ------
     def show_history():
         history_win = tk.Toplevel(win)
         history_win.title("Transaction History")
@@ -171,7 +170,6 @@ def main_window():
         balance = 0
         transactions = []
 
-        # Recreate fresh Excel file
         wb = Workbook()
         ws = wb.active
         ws.append(["Type", "Receiver", "Amount"])
@@ -179,7 +177,7 @@ def main_window():
 
         messagebox.showinfo("Cleared", "All data has been cleared!")
 
-    # ------ BUTTONS ------
+   
     tk.Button(win, text="Check Balance", width=20, command=check_balance).pack(pady=5)
     tk.Button(win, text="Add Money", width=20, command=add_money).pack(pady=5)
     tk.Button(win, text="Pay Money", width=20, command=pay_money).pack(pady=5)
@@ -192,6 +190,5 @@ def main_window():
     win.mainloop()
 
 
-# START PROGRAM
 load_transactions_from_excel()
 login_window()
