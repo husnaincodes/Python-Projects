@@ -4,7 +4,7 @@ from openpyxl import Workbook, load_workbook
 import os
 
 
-# ------------ GLOBAL VARIABLES ------------
+
 balance = 0
 transactions = []
 correct_pin = "1234"
@@ -12,12 +12,11 @@ file_name = "wallet_transactions.xlsx"
 
 
 
-# ------------ LOAD / CREATE EXCEL FILE ------------
 def load_transactions_from_excel():
     global transactions, balance
 
     if not os.path.exists(file_name):
-        # create new Excel file
+       
         wb = Workbook()
         ws = wb.active
         ws.append(["Type", "Receiver", "Amount"])
@@ -46,7 +45,6 @@ def save_transaction_to_excel(tran_type, receiver, amount):
     wb.save(file_name)
 
 
-# ------------ LOGIN WINDOW ------------
 def login_window():
     login = tk.Tk()
     login.title("Digital Wallet - Login")
@@ -69,7 +67,6 @@ def login_window():
     login.mainloop()
 
 
-# ------------ MAIN WALLET WINDOW ------------
 def main_window():
     win = tk.Tk()
     win.title("Digital Wallet - FinTech Project")
@@ -77,11 +74,11 @@ def main_window():
 
     tk.Label(win, text="DIGITAL WALLET", font=("Arial", 18, "bold")).pack(pady=10)
 
-    # ------ CHECK BALANCE ------
+   
     def check_balance():
         messagebox.showinfo("Balance", f"Current Balance: {balance} PKR")
 
-    # ------ ADD MONEY ------
+
     def add_money():
         add_win = tk.Toplevel(win)
         add_win.title("Add Money")
@@ -96,10 +93,9 @@ def main_window():
             amount = int(amount_entry.get())
             balance += amount
 
-            # Save in memory
             transactions.append(("ADD", amount))
 
-            # Save in Excel
+           
             save_transaction_to_excel("ADD", "", amount)
 
             messagebox.showinfo("Success", "Amount Added!")
@@ -107,7 +103,7 @@ def main_window():
 
         tk.Button(add_win, text="Add", command=add_amount).pack(pady=20)
 
-    # ------ PAY MONEY ------
+ 
     def pay_money():
         pay_win = tk.Toplevel(win)
         pay_win.title("Pay Money")
@@ -131,10 +127,8 @@ def main_window():
             else:
                 balance -= amount
 
-                # Save in memory
                 transactions.append(("PAY", receiver, amount))
 
-                # Save in Excel
                 save_transaction_to_excel("PAY", receiver, amount)
 
                 messagebox.showinfo("Success", f"Paid {amount} PKR to {receiver}!")
