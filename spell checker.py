@@ -1,5 +1,6 @@
 from spellchecker  import SpellChecker
 class SpellCheckerApp:
+
     def __init__(self):
         self.spell = SpellChecker()
     def correct_text(self,text):
@@ -22,6 +23,7 @@ class SpellCheckerApp:
                 break
             corrected_text = self.correct_text(text)
             print(f"Corrected text : {corrected_text}")
+            
 if __name__ == "__main__":
     SpellCheckerApp().run()
     
