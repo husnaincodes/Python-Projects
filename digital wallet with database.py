@@ -1,11 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
 
-
 balance = 0
 transactions = []
 correct_pin = "1234"
-
 
 def login_window():
     login = tk.Tk()
@@ -27,7 +25,6 @@ def login_window():
     tk.Button(login, text="Login", command=check_pin, font=("bold", 12)).pack(pady=15)
 
     login.mainloop()
-
 
 
 def main_window():
