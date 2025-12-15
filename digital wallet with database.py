@@ -6,7 +6,6 @@ balance = 0
 transactions = []
 correct_pin = "1234"
 
-# Husnain Tayab
 
 def login_window():
     login = tk.Tk()
@@ -42,7 +41,7 @@ def main_window():
     def check_balance():
         messagebox.showinfo("Balance", f"Current Balance: {balance} PKR")
 
- #Suleman Hadi
+ 
     # ADD MONEY 
     def add_money():
         add_win = tk.Toplevel(win)
@@ -63,7 +62,7 @@ def main_window():
 
         tk.Button(add_win, text="Add", command=add_amount).pack(pady=20)
 
- #Ali Abbas 
+
     def pay_money():
         pay_win = tk.Toplevel(win)
         pay_win.title("Pay Money")
@@ -90,7 +89,7 @@ def main_window():
                 messagebox.showinfo("Success", f"Paid {amount} PKR to {receiver}!")
                 pay_win.destroy()
         tk.Button(pay_win, text="Send", command=send_payment).pack(pady=20)
-        #Mubeen Javed
+   
       # TRANSACTION HISTORY 
     def show_history():
         history_win = tk.Toplevel(win)
@@ -110,7 +109,7 @@ def main_window():
                 text = f"{i}. Paid {t[2]} PKR to {t[1]}"
 
             tk.Label(history_win, text=text, font=("bold", 11)).pack(anchor="w", padx=20)
-# All member
+
 
     tk.Button(win, text="Check Balance", width=20, command=check_balance).pack(pady=5)
     tk.Button(win, text="Add Money", width=20, command=add_money).pack(pady=5)
