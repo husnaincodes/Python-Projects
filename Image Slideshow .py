@@ -13,7 +13,6 @@ image_paths = [
 
 image_size = (1000, 600)
 
-
 images = [Image.open(path).resize(image_size) for path in image_paths]
 photo_images = cycle([ImageTk.PhotoImage(image) for image in images])
 
