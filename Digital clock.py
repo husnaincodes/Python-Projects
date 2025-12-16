@@ -5,7 +5,6 @@ from time import strftime
 root = tk.Tk()
 root.title('Digital clock')
 
-
 def time():
     string = strftime('%H:%M:%S %p \n %A, %D %B %Y')
     label.config(text = string)
