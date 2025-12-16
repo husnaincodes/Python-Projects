@@ -10,7 +10,7 @@ def login():
 
         password = request.form.get("password")
 
-        if username == "admin" and password == "123":
+        if username == "admin" and password == "1234":
 
             session["user"] = username
             flash("Login successful!", "success")
