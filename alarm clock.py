@@ -13,7 +13,6 @@ def alarm(seconds):
         seconds_left = time_left % 60
 
         print(f"Alarm will sound in: {minutes_left:02d}:{seconds_left:02d}")
-
  
     mixer.init()
     mixer.music.load("alarm.mp3")
