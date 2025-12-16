@@ -12,7 +12,7 @@ if __name__ == "__main__":
             "Every hour I invest today is building the 4.0 CGPA I dream of tomorrow."
         ])
         
-        
+    
         time.sleep(3600*3600)
 
 
