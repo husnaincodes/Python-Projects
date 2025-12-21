@@ -1,4 +1,4 @@
-temps = (30, 32, 33, 31, 29, 35, 36)
+temps = (30, 32, 33, 31, 29, 35, 36,100)
 
 hottest = max(temps)
 coolest = min(temps)
