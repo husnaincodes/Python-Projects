@@ -2,8 +2,10 @@ import turtle
 import time
 import random
 
+
 WIDTH ,HEIGHT = 500,500
 COLORS = ["red","green","green","yellow","blue","cyan","brown","pink","orange","purple"]
+
 def get_number_of_racers():
     racers = 0
 
@@ -57,5 +59,6 @@ init_turtle()
 random.shuffle(COLORS)
 colors = COLORS[:racers]
 winner = race(colors)
+
 print("The winner of the turtle with color:",winner)
 time.sleep(5)
