@@ -14,6 +14,7 @@ while True:
             discount = total*0.10
         else:
             discount = 0
+    
     final_amount = total-discount
     print(f"Original total = {total}")
     print(f"Discount : {discount}")
