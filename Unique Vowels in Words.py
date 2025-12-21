@@ -1,4 +1,5 @@
 sentence = input("Enter a sentence: ").lower()
+
 vowels = {'a', 'e', 'i', 'o', 'u'}
 
 for word in sentence.split():
