@@ -5,6 +5,8 @@ import webbrowser
 import pyttsx3
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
+
+
 def speak(text):
     try:
         print(f"Speaking: {text}")
@@ -13,6 +15,7 @@ def speak(text):
     except Exception as e:
         print(f"Text-to-speech error: {e}")
 
+    
     
 if __name__== "__main__":
     speak("Initializing Gaara......")
