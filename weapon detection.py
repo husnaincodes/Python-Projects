@@ -28,8 +28,10 @@ while True:
     key = cv2.waitKey(1)& 0xFF
     if key==ord("q"):
         break
+
 if gun_exist:
     print("guns detected")
+    
 else:
     print("gun din't detected")
 camera.release()
