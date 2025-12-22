@@ -1,5 +1,6 @@
 
 word = input("Enter a word: ").lower()
+
 repeated = []
 
 for letter in set(word):
