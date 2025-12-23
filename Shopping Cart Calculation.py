@@ -10,7 +10,7 @@ while True:
         break
     else:
     
-        if total >5000:
+        if total >6000:
             discount = total*0.10
         else:
             discount = 0
