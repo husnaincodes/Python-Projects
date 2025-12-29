@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
-
 X = np.linspace(0.1, 5, 100)  # Good X
 U1 = 2  
 U2 = 4  
