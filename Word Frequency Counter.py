@@ -1,4 +1,5 @@
 sentence = input("Enter a sentence: ").lower()
+
 words = sentence.split()
 unique_words = set(words)
 
