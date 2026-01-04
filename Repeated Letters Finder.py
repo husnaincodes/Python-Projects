@@ -1,4 +1,3 @@
-
 word = input("Enter a word: ").lower()
 
 repeated = []
