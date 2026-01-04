@@ -1,5 +1,3 @@
-
-
 print("WELCOME TO MY COMPUTER GAME!")
 
 player = input("DO you want to play the game (yes/no):").lower()
