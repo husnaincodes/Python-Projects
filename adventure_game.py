@@ -1,4 +1,3 @@
-
 def adventure_game():
     
     print("Welcome! to the Adventure Game")
