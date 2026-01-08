@@ -1,4 +1,3 @@
-
 import smtplib as s
 
 from getpass import getpass 
