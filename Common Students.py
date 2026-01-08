@@ -1,4 +1,4 @@
-math = {"Ali", "Sara", "Bilal", "Hina"}
+math = {"Ali", "Sara", "Bilal", "Hina","Husnain"}
 science = {"Hina", "Zara", "Ali", "Umer", "Ahmad"}
 
 print("Enrolled in both subjects:", math & science)
