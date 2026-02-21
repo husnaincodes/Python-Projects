@@ -3,8 +3,9 @@ import time
 
 auto.press("win")
 time.sleep(1)
+# change libraoffice into notepad it works without error
 
-auto.write("LibreOffice Writer",interval=0.2)
+auto.write("LibreOffice Writer",interval=0.2) 
 auto.press("enter")
 
 time.sleep(1)
