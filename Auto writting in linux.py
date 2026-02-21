@@ -36,5 +36,3 @@ Best regards,
 Husnain
 """,interval=0.2)
 auto.press("enter")
-
-auto.write("python", interval=0.2)
