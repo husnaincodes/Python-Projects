@@ -8,4 +8,8 @@ auto.write("LibreOffice Writer",interval=0.2)
 auto.press("enter")
 
 time.sleep(1)
-auto.write("Hello world")
+auto.write("Hello world",interval=0.2)
+auto.press("enter")
+
+auto.write("python",interval=0.2)
+auto.press("enter")
