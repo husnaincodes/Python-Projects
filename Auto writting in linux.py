@@ -20,19 +20,6 @@ auto.click(screenWidth / 2, screenHeight / 2)
 time.sleep(1)
 
 
-auto.write("""Dear Ma’am,
-
-I hope you are doing well.
-
-I sincerely apologize for forgetting to submit the assignment on the given deadline. I have now attached the completed assignment with this email for your kind review.
-
-I will also submit the physical (hard copy) of the assignment on **Wednesday**, as required.
-
-I kindly request you to please consider my submission. I will be very careful with deadlines in the future.
-
-Thank you so much for your time and understanding.
-
-Best regards,
-Husnain
+auto.write("""Hi, I’m Husnain Tayab you can find me online as husnaincodes. I’m an undergraduate FinTech student and an aspiring Data Scientist who loves exploring Python, Pandas, and Machine Learning. I also know the basics of HTML, CSS, and C++, which help me combine logic with creativity. I enjoy learning through hands-on projects, experimenting with new ideas, and sharing my progress here on GitHub.
 """,interval=0.2)
 auto.press("enter")
