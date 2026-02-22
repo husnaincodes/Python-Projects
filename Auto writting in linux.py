@@ -20,6 +20,6 @@ auto.click(screenWidth / 2, screenHeight / 2)
 time.sleep(1)
 
 
-auto.write("""Hi, I’m Husnain Tayab you can find me online as husnaincodes. I’m an undergraduate FinTech student and an aspiring Data Scientist who loves exploring Python, Pandas, and Machine Learning. I also know the basics of HTML, CSS, and C++, which help me combine logic with creativity. I enjoy learning through hands-on projects, experimenting with new ideas, and sharing my progress here on GitHub.
+auto.write("""Hi, I’m Husnain Tayab you can find me online as husnaincodes. I’m an undergraduate FinTech student and an aspiring Data Scientist who loves exploring Python, Pandas, and Machine Learning. I also know the basics of HTML, CSS, Js and C++, which help me combine logic with creativity. I enjoy learning through hands-on projects, experimenting with new ideas, and sharing my progress here on GitHub.
 """,interval=0.2)
 auto.press("enter")
