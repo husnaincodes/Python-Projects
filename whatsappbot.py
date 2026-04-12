@@ -1,4 +1,5 @@
 import pywhatkit
+
 phone_number = (input("Enter the Phone number of receiver in (+92): "))
 message = input("Enter the message you want to sent: ")
 
