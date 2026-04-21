@@ -1,4 +1,4 @@
-nums = (2, 4, 6, 3, 5, 7)
+nums = (2, 4, 6, 3, 5, 7, 8, 1)
 target = int(input("Enter target sum: "))
 
 for i in range(len(nums)):
