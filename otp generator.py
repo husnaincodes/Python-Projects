@@ -1,4 +1,3 @@
-
 import random
 def otp_generator(length = 4):
     if length<0:
