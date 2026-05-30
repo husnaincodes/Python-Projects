@@ -53,7 +53,6 @@ def create_turtles(colors):
         turtles.append(racer)
     return turtles
 
-
 racers = get_number_of_racers()
 init_turtle()
 random.shuffle(COLORS)
