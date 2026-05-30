@@ -1,8 +1,4 @@
-# ----------------------------------------------------
-#           DIGITAL WALLET (FinTech Project) - Fixed
-# ----------------------------------------------------
 
-# Initial wallet balance
 balance = 0
 
 # List to store transaction history
