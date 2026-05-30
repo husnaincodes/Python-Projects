@@ -1,10 +1,10 @@
 
 balance = 0
 
-# List to store transaction history
+
 transactions = []
 
-# Correct wallet PIN
+
 correct_pin = "1234"
 
 
@@ -17,7 +17,7 @@ def login():
     attempts = 3
 
     while attempts > 0:
-        pin = input("Enter PIN: ").strip()            # strip spaces
+        pin = input("Enter PIN: ").strip()            
 
         if pin == correct_pin:
             print("\nLogin successful!\n")
