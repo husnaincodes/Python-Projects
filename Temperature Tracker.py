@@ -6,6 +6,8 @@ coolest = min(temps)
 print(f"Hottest Temperature : {hottest}°C")
 print(f"Coolest Temperature :{coolest}°C")
 print("Day above 32°C")
+
 for temp in temps:
+
     if temp>32:
         print(temp)
