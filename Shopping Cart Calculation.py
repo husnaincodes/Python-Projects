@@ -1,5 +1,6 @@
 price  = []
 i = 0
+
 while True:
     
     input_price = int(input("Enter the price of items or (Enter 0 to quit the program) : "))
