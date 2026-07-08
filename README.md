@@ -1,32 +1,266 @@
-A collection of beginner-to-intermediate level Python projects I’ve built to practice core programming concepts, logic building, and libraries.
-Each project focuses on a different idea — from small utilities to fun games and simple automation scripts.
+# 🐍 Python Projects
 
-📂 Projects Included<br>
-Project Name	Description<br>
-Email check.py / Email sender.py	Validate and send emails using Python.<br>
-Notification.py	Simple desktop notification app.<br>
-Rent calculator.py	Calculates rent splits and expenses.<br>
-Adventure game.py	A text-based adventure game.<br>
-Hangman game.py	Classic Hangman word guessing game.<br>
-Login page.py (Flask)	Basic Flask web app for user login.<br>
-Password manager.py	Stores and manages passwords securely.<br>
-Project_02.py	Number guessing game.<br>
-Project_03.py	QR code generator using Python.<br>
-Python project1.py	Dice roll simulation game.<br>
-Quiz game.py	Simple quiz game using Python logic.<br>
-Voice AI.py	Voice assistant built using Python speech libraries.<br>
-Words.txt / Password.txt	Supporting files for some projects.<br>
+A collection of Python projects I've built while learning full-stack development, automation, data/finance engineering, and AI/ML — ranging from single-file scripts written to practice core logic, to a full IFRS-compliant accounting engine and two Django web apps.
 
-⚙️ Technologies Used
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-web-black?logo=flask&logoColor=white)
+![Django](https://img.shields.io/badge/Django-web-092E20?logo=django&logoColor=white)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-Python 3
+**At a glance:** 47 standalone scripts + 2 Django web apps, spanning 9 categories, actively added to since August 2025.
 
-Flask (for web app)
+## 📋 Table of Contents
 
-smtplib / email / pyqrcode / speechrecognition / random / os
+- [About](#-about)
+- [Repository Structure](#-repository-structure)
+- [Project Categories](#-project-categories)
+  - [Finance, Accounting & Economics](#-finance-accounting--economics)
+  - [Digital Wallet Simulations](#-digital-wallet-simulations)
+  - [Games](#-games)
+  - [AI, ML & Computer Vision](#-ai-ml--computer-vision)
+  - [Email Tools](#-email-tools)
+  - [Automation & Desktop Utilities](#️-automation--desktop-utilities)
+  - [Data Structures & Algorithm Practice](#-data-structures--algorithm-practice)
+  - [Management Systems](#-management-systems)
+  - [Web Applications](#-web-applications)
+- [Featured Projects](#-featured-projects)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [Running the Projects](#️-running-the-projects)
+- [Notes & Disclaimers](#️-notes--disclaimers)
+- [Author](#-author)
 
+## 📖 About
 
-Author
+This repo is my sandbox for practicing Python — every project here was built to learn a specific concept, library, or pattern rather than to ship a polished product. It's grown organically since August 2025 and now covers:
 
-Husnain – Undergraduate FinTech student passionate about Data Science & AI.
+- Core language practice (loops, sets, dicts, list comprehensions)
+- Small games and simulations
+- GUI apps with Tkinter
+- Automation scripts (auto-typing, notifications, QR codes, downloaders)
+- AI/ML experiments (spam classification, computer vision, voice assistant)
+- Two full Django web applications and a Flask app
+- A large IFRS-compliant financial accounting engine built entirely with `openpyxl`
 
+## 📁 Repository Structure
+
+```
+Python-Projects/
+├── .github/workflows/
+│   └── static.yml                       # GitHub Pages deploy workflow
+├── main/                                # Django portfolio site (v1)
+│   ├── Home/                            # views, urls, models (Contact)
+│   ├── main/                            # project settings, asgi/wsgi
+│   ├── static/                          # CSS + images
+│   ├── templates/                       # home / about / projects / contact
+│   ├── db.sqlite3
+│   └── manage.py
+├── main2/                               # Django portfolio site (v2)
+│   ├── Home/
+│   ├── accounts/                        # login/logout app — new in v2
+│   ├── main/
+│   ├── static/
+│   ├── templates/
+│   ├── db.sqlite3
+│   └── manage.py
+│
+├── 47 standalone .py scripts            # see Project Categories below
+│
+├── cascade.xml                          # Haar cascade used by weapon detection.py
+├── words.txt                            # word bank used by hangman game.py
+├── password.txt                         # data file used by password manager.py
+├── wallet_transactions.xlsx             # data file used by digital wallet.py
+├── Group8_IFRS_Accounting_Engine.xlsx   # generated output of Accounting project.py
+├── alarm.mp3                            # audio used by alarm clock.py
+├── husnaincodes.jpg                     # branding/QR image asset
+├── PyWhatKit_DB.txt                     # auto-generated by the pywhatkit library
+└── README.md
+```
+
+## 🗂 Project Categories
+
+### 💰 Finance, Accounting & Economics
+
+| File | Description |
+|---|---|
+| `Accounting project.py` | Generates a full 15-sheet IFRS-compliant accounting workbook (`Group8_IFRS_Accounting_Engine.xlsx`) from a variable matrix and 35 journal transactions — General Ledger, Trial Balance, Inventory/PPE/Lease/Equity modules, Profit & Loss, Statement of Financial Position, Cash Flow, Notes, and an interactive Dashboard, all cross-referenced with live formulas. Applies IAS 1, 2, 7, 16, 32, 36, 37, 38 and IFRS 16. |
+| `Banking Transaction Tracker.py` | Splits a list of transactions into total deposits/withdrawals and calculates the net balance. |
+| `Rent calculator.py` | Splits rent, food, and electricity costs evenly across roommates. |
+| `Shopping Cart Calculation.py` | Running shopping cart total with an automatic 10% discount above a spending threshold. |
+| `stat.py` | Calculates a 90% confidence interval for a sample mean using `scipy.stats`. |
+| `indifference curve.py` | Plots microeconomics indifference curves for two utility levels with `matplotlib`. |
+
+### 👛 Digital Wallet Simulations
+
+Three iterations of the same idea, each adding a layer of complexity:
+
+| File | Description |
+|---|---|
+| `Terminal  base wallet.py` | Command-line wallet with PIN login (3 attempts), balance check, add/pay money, and transaction history — all in memory. |
+| `digital wallet without database.py` | Same feature set rebuilt as a Tkinter desktop GUI, still in-memory. |
+| `digital wallet.py` | Tkinter GUI wallet with persistent storage — reads/writes every transaction to `wallet_transactions.xlsx` via `openpyxl`, plus a "Clear All Data" option. |
+
+### 🎮 Games
+
+| File | Description |
+|---|---|
+| `adventure_game.py` | Branching text-based adventure with forest, river, and mountain paths and multiple endings. |
+| `hangman game.py` | Classic Hangman with words pulled at random from `words.txt`. |
+| `quiz game .py` | Short general-knowledge quiz (CPU, DBMS, ICT, HTML, PR full forms). |
+| `Slot machine.py` | Configurable slot machine — choose your bet and number of lines, spin a 3x3 symbol grid, and see if you win. |
+| `Turtle Racing.py` | Animated multi-turtle race for 2–10 racers using the `turtle` module. |
+| `python project1.py` | Two-dice roll simulator. |
+| `project_02.py` | Number-guessing game (1–200) with input validation. |
+
+### 🤖 AI, ML & Computer Vision
+
+| File | Description |
+|---|---|
+| `Fake Email detecter.py` | Spam vs. ham email classifier — `CountVectorizer` + Multinomial Naive Bayes (`scikit-learn`), trained/tested on a small labeled sample and evaluated with accuracy and a confusion matrix. |
+| `weapon detection.py` | Real-time webcam weapon detector using an OpenCV Haar cascade classifier (`cascade.xml`, included in the repo) — draws a bounding box around detections, aimed at a security-camera use case. |
+| `voice AI .py` | Wake-word voice assistant ("Gaara") — listens continuously, wakes on the trigger word, then executes and speaks back a response using `speech_recognition` + `pyttsx3`. |
+| `spell checker.py` | Interactive command-line spell checker built on `pyspellchecker`. |
+
+### 📧 Email Tools
+
+| File | Description |
+|---|---|
+| `Email check.py` | Validates email formatting manually, character-by-character, without regex. |
+| `Email sender.py` | Sends an email through Gmail's SMTP server using `smtplib`. |
+
+> See also `Fake Email detecter.py` above under AI, ML & Computer Vision — a spam/ham classifier for emails.
+
+### 🛠️ Automation & Desktop Utilities
+
+| File | Description |
+|---|---|
+| `Auto writting.py` / `Auto writting in linux.py` | `pyautogui` scripts that open a word processor and auto-type a short introduction — Windows and Linux (LibreOffice Writer) variants. |
+| `alarm clock.py` | Countdown timer that plays `alarm.mp3` on completion using `pygame`. |
+| `Digital clock.py` | Live-updating digital clock built with `tkinter`. |
+| `Notification.py` | Sends recurring Linux desktop notifications (`notify-send`) with a study reminder. |
+| `Image Slideshow .py` | Tkinter/PIL slideshow that cycles through local images. |
+| `otp generator.py` | Generates a random numeric OTP of configurable length. |
+| `password manager.py` | Simple CLI to add and view saved account credentials, stored in `password.txt`. |
+| `Youtube video downloader.py` | Downloads a YouTube video (up to 1080p) using `yt-dlp`. |
+| `project_03.py` | Generates a QR code from a URL using the `qrcode` library. |
+| `whatsappbot.py` | Schedules a WhatsApp message to a phone number at a given time using `pywhatkit`. |
+
+### 🧮 Data Structures & Algorithm Practice
+
+Small, focused scripts practicing core Python data structures — lists, sets, dicts, and tuples:
+
+| File | Description |
+|---|---|
+| `Customer Feedback.py` | Counts how many customers gave each rating (1–5). |
+| `Duplicate Order Removal.py` | Removes duplicate order IDs and returns them sorted, using a `set`. |
+| `Product Inventory Manager.py` | Aggregates repeated product entries into total quantities with a `dict`. |
+| `Common Students.py` | Set operations (union, intersection, difference) across two class rosters. |
+| `Unique Pair Sum.py` | Brute-force search for pairs in a tuple that add up to a target sum. |
+| `Word Frequency Counter.py` | Counts how often each word appears in a sentence. |
+| `Unique Vowels in Words.py` | Finds the unique vowels used in each word of a sentence. |
+| `Repeated Letters Finder.py` | Finds letters that appear more than once in a word. |
+| `Student Ranking.py` | Finds the student(s) with the highest marks from a list of tuples. |
+| `Student Marks Analyzer.py` | Computes highest, lowest, and average marks plus pass/fail counts. |
+| `Employee Attendance.py` | Tracks present/absent employees for a day using set operations. |
+| `Temperature Tracker.py` | Finds the hottest/coolest recorded temperature and days above a threshold. |
+
+### 🎓 Management Systems
+
+| File | Description |
+|---|---|
+| `Student Grade Management System .py` | Menu-driven CLI to add, update, delete, and view student grades, backed by a `dict`. |
+
+### 🌐 Web Applications
+
+| Project | Description |
+|---|---|
+| `login page.py` | Minimal Flask app with a session-based login page, flash messages, and a welcome/logout flow. |
+| `main/` | Django personal portfolio site (v1) — Home, About, Projects, and Contact pages, with contact-form submissions saved to SQLite. |
+| `main2/` | Django personal portfolio site (v2) — same pages, plus a dedicated `accounts` app adding a login/logout gate in front of the site. |
+
+## ⭐ Featured Projects
+
+**IFRS Accounting Engine** — `Accounting project.py` is the largest and most advanced project here (1,200+ lines). Running it regenerates `Group8_IFRS_Accounting_Engine.xlsx`, a 15-sheet workbook wired together with live `openpyxl` formulas: Dashboard, Variable Matrix, Journal (35 IFRS transactions), General Ledger, Trial Balance, Inventory/PPE/Lease/Equity modules, Profit & Loss, SOFP, Cash Flow (indirect method), Notes, an AI log, and an input form — built for a university group project (Group 8).
+
+**Digital Wallet, three ways** — the same PIN-protected core (check balance, add money, pay money, view history) rebuilt three times: terminal app → Tkinter GUI → Tkinter GUI with Excel-backed persistence.
+
+**Fake Email Detector** — a compact but genuine ML pipeline: label spam/ham examples, split into train/test, vectorize with `CountVectorizer`, train a Multinomial Naive Bayes model, then evaluate and classify new emails.
+
+**Personal Portfolio (Django)** — two iterations of a Django-based personal site in `main/` and `main2/`: Home/About/Projects/Contact pages, a DB-backed contact form, and, in `main2`, a simple authentication gate added via a dedicated `accounts` app.
+
+## 🧰 Tech Stack
+
+**Language:** Python 3
+
+**Web:** Flask, Django
+
+**GUI:** Tkinter
+
+**Data, Finance & Visualization:** openpyxl, pandas, numpy, scipy, matplotlib
+
+**Machine Learning:** scikit-learn
+
+**Computer Vision:** OpenCV (`opencv-python`), imutils
+
+**Voice & Audio:** SpeechRecognition, pyttsx3, pygame
+
+**Automation & Bots:** pyautogui, pywhatkit, yt-dlp
+
+**Security & Misc. Utilities:** cryptography, qrcode, pyspellchecker
+
+**Storage:** SQLite (Django default), Excel workbooks as a lightweight data store for the wallet and accounting projects
+
+## 🚀 Getting Started
+
+```bash
+git clone https://github.com/husnaincodes/Python-Projects.git
+cd Python-Projects
+python3 -m venv venv
+source venv/bin/activate      # Windows: venv\Scripts\activate
+
+pip install django flask pillow cryptography opencv-python imutils \
+            matplotlib numpy openpyxl pandas pyautogui pygame pyttsx3 \
+            pywhatkit qrcode scipy scikit-learn SpeechRecognition \
+            pyspellchecker yt-dlp
+```
+
+No single project needs every library above — install what the script you want to run actually imports, or install everything up front for convenience.
+
+**Platform notes:**
+- `speech_recognition`'s `Microphone` class needs **PyAudio**, which needs the **PortAudio** system library (`sudo apt install portaudio19-dev` on Ubuntu/Debian before `pip install pyaudio`).
+- `Notification.py` calls the Linux-only `notify-send` command (part of `libnotify-bin`).
+- `tkinter` ships with most Python installs, but on some Linux distros it's a separate package (`sudo apt install python3-tk`).
+
+## ▶️ Running the Projects
+
+Most scripts are standalone — run any of them directly:
+
+```bash
+python3 "script name.py"
+```
+
+A few need a bit more setup:
+
+| Project | How to run |
+|---|---|
+| `login page.py` (Flask) | `python3 "login page.py"`, then open `http://127.0.0.1:5000` |
+| `main/` (Django) | `cd main && python manage.py migrate && python manage.py runserver` |
+| `main2/` (Django) | `cd main2 && python manage.py migrate && python manage.py runserver` |
+| `weapon detection.py` | Needs a connected webcam; press `q` to close the video window |
+| `Image Slideshow .py` | Update the hardcoded image paths at the top of the file before running |
+| `voice AI .py` | Needs a working microphone, an internet connection (uses Google's speech API), and PyAudio installed |
+| `Auto writting.py` / `Auto writting in linux.py` | Takes over your mouse/keyboard to type into a word processor — save your work first and don't touch the mouse while it runs |
+
+## ⚠️ Notes & Disclaimers
+
+- These are learning and practice projects built over time, not production software — several use hardcoded credentials for simplicity: the wallet apps and Flask login use PIN/password `1234`, and the Django `accounts` app uses `admin` / `123`.
+- `password manager.py` stores credentials in **plain text** in `password.txt`. It's a data-structures exercise, not a real password manager — don't store real passwords with it.
+- `weapon detection.py` is a basic Haar-cascade proof of concept, not a production security system.
+- No `requirements.txt` or `LICENSE` is currently included in the repo.
+
+## 👤 Author
+
+**Husnain** ([@husnaincodes](https://github.com/husnaincodes)) — FinTech undergraduate exploring full-stack development, data science, and financial engineering through hands-on projects.
+
+- Portfolio: [portfolio-husnaincodes-projects.vercel.app](https://portfolio-husnaincodes-projects.vercel.app)
+- More projects: [github.com/husnaincodes](https://github.com/husnaincodes)
