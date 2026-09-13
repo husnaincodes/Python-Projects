@@ -3,14 +3,10 @@ from tkinter import messagebox
 from openpyxl import Workbook, load_workbook
 import os
 
-
-
 balance = 0
 transactions = []
 correct_pin = "1234"
 file_name = "wallet_transactions.xlsx"
-
-
 
 def load_transactions_from_excel():
     global transactions, balance
